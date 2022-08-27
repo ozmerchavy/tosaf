@@ -1,0 +1,22 @@
+{
+    "name": "tosaf",
+    "description": "don't read me",
+    "version": "1.0.1",
+    "manifest_version": 3,
+    "permissions": [
+        "scripting", 
+        "storage", 
+        "activeTab",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "./bg.js"
+    },
+    "host_permissions": [
+        "http://*/",
+        "https://*/"
+      ],
+      "optional_host_permissions": [
+        "*://*/*"
+    ]
+  }
