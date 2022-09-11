@@ -1,8 +1,19 @@
+const NEW_TAB = 'chrome://newtab/';
+
+
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-  if (changeInfo.status == 'complete') {
+
+  console.log(changeInfo);
+
+  if (changeInfo.status == 'loading') {
+
+    console.log(tab)
+
+    if (tab.url == NEW_TAB) return;
+
     chrome.scripting.executeScript(
       {
-        target: { tabId, allFrames: true },
+        target: { tabId, allFrames: false },
         files: ['./fg.js']
       }
     );

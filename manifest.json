@@ -16,7 +16,7 @@
         "http://*/",
         "https://*/"
       ],
-      "optional_host_permissions": [
+    "optional_host_permissions": [
         "*://*/*"
     ]
-  }
+}
